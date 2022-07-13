@@ -5,6 +5,12 @@ public class Persona {
 	private String nombre;
 	private String telefono;
 	
+	/**
+	 * 
+	 * @param edad
+	 * @param nombre
+	 * @param telefono
+	 */
 	public Persona(int edad, String nombre, String telefono) {
 		super();
 		this.edad = edad;
