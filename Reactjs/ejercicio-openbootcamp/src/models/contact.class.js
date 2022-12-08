@@ -1,6 +1,6 @@
 
 
-export class Contacto {
+export class ContactClass {
     name = "";
     lastName = "";
     email = "";
