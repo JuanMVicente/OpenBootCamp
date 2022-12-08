@@ -4,6 +4,16 @@ import { ContactClass } from '../../models/contact.class';
 
 
 const ContactComponent = ({contact}) => {
+
+
+    const changeState = () => {
+        var state = true;
+        if (contact.connected){
+            state = false;
+        }
+        contact.setConected(state);     
+    }
+
     return (
         <div>
             <h2>
@@ -19,7 +29,8 @@ const ContactComponent = ({contact}) => {
                 e-mail: { contact.email }
             </h4>
             <h4>
-                Status: { contact.conected ? 'Conected': 'disconnected' }
+                Status: { contact.connected ? 'Conected': 'disconnected' }<br></br>
+                <button onClick={ changeState }>Change State</button>
             </h4>
         </div>
     );
